@@ -65,18 +65,8 @@ This version includes the commands and their expected output (simulated where ne
 16. Create nested structure and file:
     $ mkdir -p nested/inside/deep && touch nested/inside/deep/depth.txt
 
-17. Create symbolic link:
-    $ ln -s myfolder/testfile.txt testlink
 
-18. Find .txt files:
-    $ find . -name "*.txt"
-    Output: ./myfolder/testfile.txt ./nested/inside/deep/depth.txt
-
-19. Count lines:
-    $ wc -l myfolder/testfile.txt
-    Output: 1 myfolder/testfile.txt
-
-20. View first 5 lines:
+17. View first 5 lines:
     $ head -n 5 myfolder/testfile.txt
 
 ✅ Clean up when finished:
