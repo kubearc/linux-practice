@@ -1,0 +1,85 @@
+==============================
+🧪 LINUX FILE MANAGEMENT PRACTICE TEST WITH OUTPUT
+==============================
+
+📌 INSTRUCTIONS:
+This version includes the commands and their expected output (simulated where necessary). Run each command and compare your output.
+
+🔹 TASK 1: BASIC FILE OPERATIONS
+------------------------------
+1. Create an empty file:
+   $ touch testfile.txt
+
+2. Write to the file:
+   $ echo "Hello Linux" > testfile.txt
+
+3. Display contents:
+   $ cat testfile.txt
+   Output: Hello Linux
+
+4. Copy file:
+   $ cp testfile.txt copyfile.txt
+
+5. Rename file:
+   $ mv copyfile.txt renamedfile.txt
+
+🔹 TASK 2: DIRECTORY OPERATIONS
+------------------------------
+6. Create a directory:
+   $ mkdir myfolder
+
+7. Move file into directory:
+   $ mv testfile.txt myfolder/
+
+8. Change into directory and list:
+   $ cd myfolder
+   $ ls
+   Output: testfile.txt
+
+9. Create a new file:
+   $ touch notes.txt
+
+10. Go back:
+    $ cd ..
+
+🔹 TASK 3: ADVANCED FILE MANAGEMENT
+------------------------------
+11. Copy directory with contents:
+    $ cp -r myfolder backupfolder
+
+12. Delete a file:
+    $ rm myfolder/notes.txt
+
+13. Delete a folder:
+    $ rm -r backupfolder
+
+14. List files by time:
+    $ ls -lt
+
+15. Show hidden files:
+    $ ls -a
+    Output includes: . .. .bashrc .profile etc.
+
+🔹 TASK 4: BONUS (CHALLENGE)
+------------------------------
+16. Create nested structure and file:
+    $ mkdir -p nested/inside/deep && touch nested/inside/deep/depth.txt
+
+17. Create symbolic link:
+    $ ln -s myfolder/testfile.txt testlink
+
+18. Find .txt files:
+    $ find . -name "*.txt"
+    Output: ./myfolder/testfile.txt ./nested/inside/deep/depth.txt
+
+19. Count lines:
+    $ wc -l myfolder/testfile.txt
+    Output: 1 myfolder/testfile.txt
+
+20. View first 5 lines:
+    $ head -n 5 myfolder/testfile.txt
+
+✅ Clean up when finished:
+$ rm -rf myfolder backupfolder nested renamedfile.txt testlink
+
+==============================
