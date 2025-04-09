@@ -1,0 +1,60 @@
+#!/bin/bash
+# ==============================
+# 🧪 VIM COMMAND PRACTICE TASKS WITH ANSWERS
+# ==============================
+
+# 📌 INSTRUCTIONS:
+# Open this file in Vim and try the commands listed below.
+# Each task includes the correct Vim command to help you learn.
+# copy the /etc/passwd file to a new file named /passwdbackup      
+  open the /passwdbackup file and perform all the task 
+# 🔹 TASK 1: MOVEMENT
+# ------------------------------
+# 1. Move to the top of the file         --> Vim Command: gg
+# 2. Move to the bottom of the file      --> Vim Command: G
+# 3. Move to the end of the line         --> Vim Command: $
+# 4. Move to the beginning of the line   --> Vim Command: ^
+# 5. Jump to line 20                     --> Vim Command: :20
+
+# 🔹 TASK 2: INSERTING TEXT
+# ------------------------------
+# 6. Insert your name at the top         --> Vim Command: gg then O
+# 7. Add a new line after line 10        --> Vim Command: :10 then o
+# 8. Append " - Practice Complete"       --> Vim Command: A then type the text
+
+# 🔹 TASK 3: DELETING TEXT
+# ------------------------------
+# 9. Delete a line                       --> Vim Command: dd
+# 10. Delete first word on next line     --> Vim Command: dw
+
+# 🔹 TASK 4: COPYING & PASTING
+# ------------------------------
+# 11. Yank line 15                       --> Vim Command: :15 then yy
+# 12. Paste it below                     --> Vim Command: p
+# 13. Paste it above                     --> Vim Command: P
+
+# 🔹 TASK 5: SEARCH & REPLACE
+# ------------------------------
+# 14. Search for "TASK"                  --> Vim Command: /TASK
+# 15. Replace "TASK" with "CHALLENGE"    --> Vim Command: :%s/TASK/CHALLENGE/g
+
+# 🔹 TASK 6: UNDO, REDO, SAVE & EXIT
+# ------------------------------
+# 16. Undo last change                   --> Vim Command: u
+# 17. Redo change                        --> Vim Command: Ctrl + r
+# 18. Save the file                      --> Vim Command: :w
+# 19. Quit Vim                           --> Vim Command: :q
+# 20. Save and quit                      --> Vim Command: :wq
+
+# ✅ BONUS:
+# ------------------------------
+# 21. Macro to insert "[✓]" at start
+#     Vim Command:
+#       qa          # Start recording
+#       I[✓] <Esc>  # Insert text at start
+#       q           # Stop recording
+#       @a          # Play macro once
+#       10@a        # Play 10 times
+
+# 🎉 Great job! Keep practicing until it's muscle memory!
+# ==============================
