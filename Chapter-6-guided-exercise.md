@@ -60,8 +60,9 @@ Now create 1 more network connection with following configuration.
 | Domain            | `example.com`       |
 | Autoconnect       | `yes`               |
 
-Now activate the connection
+Create the connection and then activate the connection
 ```bash
+nmcli conn add con-name test2 ifname ens* type ethernet autoconnect yes ipv4.method auto
 nmcli conn up test2
 ```
 Check the IP address configuration
@@ -78,7 +79,7 @@ Now check which connection is activated.
 ```bash
 nmcli conn show
 ```
-If test1 is activated now activate the test connection
+If test2 is activated now activate the test connection
 ```bash
 nmcli conn up test
 ```
