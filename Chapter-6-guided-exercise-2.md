@@ -17,9 +17,11 @@ This guide provides the steps to configure static IP addresses, DNS, gateway, an
 
 ---
 
+
 ## ⚙️ Steps for Configuration. 
 📌 Notes
-Replace eth0 with your actual network interface name if it differs.
+- Reset both Nodes with the fresh snapshot.
+- Replace eth0 with your actual network interface name if it differs.
 
 ### 🔹 On Node 1
 
