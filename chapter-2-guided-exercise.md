@@ -23,7 +23,7 @@ tail -3 /usr/share/dict/words
 ```
 - Count the no. of lines of /usr/share/dict/words files
 ```bash
-wc -l /etc/passwd
+wc -l /usr/share/dict/words
 ```
 - Count the no. of lines of /etc/passwd file
 ```bash
