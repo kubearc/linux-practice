@@ -38,7 +38,7 @@ Login with `root` user on the system and then run following commands
 ```
 - Change the state to the graphical mode
 ```bash
-# systemctl isolate graphicaly.target
+# systemctl isolate graphical.target
 ```
 - Change the state permanently to the cli mode
 ```bash
