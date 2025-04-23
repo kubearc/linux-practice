@@ -2,7 +2,7 @@ Login with `root` user on the system and then run following commands
 
 - List running services
 ```bash
-# systemctl -list --type=service
+# systemctl list-units --type=service
 ```
 - List all Services 
 ``` bash
