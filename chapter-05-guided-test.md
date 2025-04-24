@@ -30,7 +30,7 @@ groupadd artist
 9. Create a user `sam` with password `123`
 ```bash
 useradd sam
-echo "sam:123" |chpasswd
+passwd sam
 ```
 
 10. Create a user `dean` with password `123`
