@@ -7,6 +7,8 @@
 df -h
 ```
 2. Create the `/dvd` folder and copy the `Appstream` and `BasesOS` directories into /dvd.
+
+Note:- Dont copy paste the RHEL-9-5-0 directories from below output, instead copy it from `df` command executed in 2nd step and provide in below command. 
 ```bash
 mkdir /dvd
 cp -rv /run/media/root/RHEL-9-5-0-BaseOS-x86_64/AppStream /dvd
