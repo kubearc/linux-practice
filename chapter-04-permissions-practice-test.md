@@ -1,59 +1,75 @@
 
 # 🧪 Linux Commands Practice Test (chmod, chown, umask)
 
+
 This document provides a hands-on practice set for essential Linux file management commands: `chmod`, `chown`, and `umask`.
 
 ---
+### Create a directory with the named permission practice test 
+```bash 
+mkdir /home/student/permision-practice-test 
+```
+### Make sure your present Working directory is /home/student/permision-practice-test
 
 ## 📁 Section A: chmod Tasks
 
-### 1. Give the owner full permissions, and read-only for group and others on `notes.txt`.
+### 1. Create a file `notes.txt`, then give the owner full permissions, and read-only for group and others.
 ```bash
+touch notes.txt
 chmod 744 notes.txt
 ```
-¯
-### 2. Remove execute permission for group and others from `app.sh`.
+
+### 2. Create a file `app.sh`, then remove execute permission for group and others.
 ```bash
+touch app.sh
 chmod go-x app.sh
 ```
 
-### 3. Make `secret.key` accessible only to the owner.
+### 3. Create a file `secret.key`, then make it accessible only to the owner.
 ```bash
+touch secret.key
 chmod 700 secret.key
 ```
 
-### 4. Add execute permission for others on directory `scripts/`.
+### 4. Create a directory `scripts/`, then add execute permission for others.
 ```bash
+mkdir scripts
 chmod o+x scripts/
 ```
 
-### 5. Make `test.c` read-only for everyone.
+### 5. Create a file `test.c`, then make it read-only for everyone.
 ```bash
+touch test.c
 chmod 444 test.c
 ```
 
-### 6. Make all files in `bin/` executable by the owner.
+### 6. Create a directory `bin/`, then make all files in it executable by the owner.
 ```bash
+mkdir bin
 chmod u+x bin/*
 ```
 
-### 7. Remove all permissions for others from `.conf` files.
+### 7. Create some `.conf` files, then remove all permissions for others from `.conf` files.
 ```bash
+touch file1.conf file2.conf
 chmod o= *.conf
 ```
 
-### 8. Set `db.sqlite` permissions: owner=rwx, group=r--, others=none.
+### 8. Create a file `db.sqlite`, then set permissions: owner=rwx, group=r--, others=none.
 ```bash
+touch db.sqlite
 chmod 740 db.sqlite
 ```
 
-### 9. Make `.sh` files executable by everyone.
+### 9. Create `.sh` files, then make them executable by everyone.
 ```bash
+touch script1.sh script2.sh
 chmod a+x *.sh
 ```
 
-### 10. Set `final.txt` as read-only for all.
+### 10. Create a file `final.txt`, then set it as read-only for all.
 ```bash
+touch final.txt
 chmod 444 final.txt
 ```
 
@@ -61,38 +77,46 @@ chmod 444 final.txt
 
 ## 👤 Section B: chown Tasks
 
-### 11. Change owner of `project.txt` to `alex`.
+### 11. Create a file `project.txt`, then change owner of `project.txt` to `alex`.
 ```bash
+touch project.txt
 chown alex project.txt
 ```
 
-### 12. Recursively change owner and group of `project/` to `devuser:devgroup`.
+### 12. Create a directory `project/` with files inside, then recursively change owner and group to `devuser:devgroup`.
 ```bash
+mkdir -p project
+touch project/file1 project/file2
 chown -R devuser:devgroup project/
 ```
 
-### 13. Change group of `file.log` to `admins`.
+### 13. Create a file `file.log`, then change group of `file.log` to `admins`.
 ```bash
+touch file.log
 chown :admins file.log
 ```
 
-### 14. Change owner of `backup.tar.gz` to `root`.
+### 14. Create a file `backup.tar.gz`, then change owner of `backup.tar.gz` to `root`.
 ```bash
+touch backup.tar.gz
 chown root backup.tar.gz
 ```
 
-### 15. Change ownership of `/var/www/html` and its contents to `webadmin:www-data`.
+### 15. Create a directory `/var/www/html`, then change ownership of `/var/www/html` and its contents to `webadmin:www-data`.
 ```bash
+sudo mkdir -p /var/www/html
 sudo chown -R webadmin:www-data /var/www/html
 ```
 
-### 16. Assign `john` ownership of `file1`, `file2`, and `file3`.
+### 16. Create files `file1`, `file2`, and `file3`, then assign `john` ownership.
 ```bash
+touch file1 file2 file3
 chown john file1 file2 file3
 ```
 
-### 17. Set group `students` for all `.txt` files.
+### 17. Create `.txt` files, then set group `students` for all `.txt` files.
 ```bash
+touch file1.txt file2.txt
 chown :students *.txt
 ```
 
