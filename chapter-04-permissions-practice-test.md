@@ -4,6 +4,11 @@
 This document provides a hands-on practice set for essential Linux file management commands: `chmod`, `chown`, and `umask`.
 
 ---
+### Create a directory with the named permission practice test 
+```bash 
+mkdir /home/student/permision-practice-test 
+```
+### Make sure your present Working directory is /home/student/permision-practice-test
 
 ## 📁 Section A: chmod Tasks
 
