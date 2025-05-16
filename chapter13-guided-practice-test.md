@@ -1,7 +1,7 @@
 # 🔐 Firewall & SELinux Practice Tasks
 
 **Level:** Beginner to Intermediate  
-**Environment:** RHEL, CentOS, Fedora, Rocky Linux (with firewalld & SELinux)
+**Environment:** Linux with firewalld & SELinux
 
 ---
 
