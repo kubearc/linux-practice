@@ -1,7 +1,7 @@
 # 🔐 Firewall Practice Tasks
 
 **Level:** Beginner to Intermediate  
-**Environment:** Linux with firewalld & SELinux
+**Environment:** Linux with firewalld
 
 ---
 
