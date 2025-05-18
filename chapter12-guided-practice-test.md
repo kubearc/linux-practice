@@ -30,7 +30,6 @@ du -h --max-depth=1 /home
 
 ### Task: Show size of a directory without following symlinks
 
-````bash
 ```bash
 du -h --no-dereference /path/to/symlink
 ````
@@ -41,7 +40,6 @@ du -h --no-dereference /path/to/symlink
 
 ### Task: Show disk space usage in human-readable format
 
-````bash
 ```bash
 df -h
 ````
