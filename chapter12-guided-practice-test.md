@@ -8,14 +8,12 @@ This document contains practical tasks using essential Linux commands: `find`, `
 
 ### Task: Find all `.log` files modified in the last 7 days in `/var/log`
 
-````bash
 ```bash
 find /var/log -name "*.log" -mtime -7
 ````
 
 ### Task: Find all symbolic links in `/home`
 
-````bash
 ```bash
 find /home -type l
 ````
@@ -26,7 +24,6 @@ find /home -type l
 
 ### Task: Show size of each subdirectory in `/home`
 
-````bash
 ```bash
 du -h --max-depth=1 /home
 ````
@@ -51,7 +48,6 @@ df -h
 
 ### Task: Show space used by the root partition
 
-````bash
 ```bash
 df -h /
 ````
@@ -61,15 +57,11 @@ df -h /
 ## ✅ 4. `locate` – Quickly Find Files
 
 ### Task: Locate all `.conf` files on the system
-
-````bash
 ```bash
 locate "*.conf"
 ````
 
 ### Task: Find the location of the `passwd` file
-
-````bash
 ```bash
 locate passwd
 ````
@@ -79,15 +71,11 @@ locate passwd
 ## ✅ 5. `grep` – Search Text in Files
 
 ### Task: Find lines containing the word "error" in a log file
-
-````bash
 ```bash
 grep "error" /var/log/syslog
 ````
 
 ### Task: Search for a username in the `/etc/passwd` file
-
-````bash
 ```bash
 grep "^user" /etc/passwd
 ````
@@ -104,8 +92,6 @@ sudo mount /dev/sdb1 /mnt/usb
 ````
 
 ### Task: View all currently mounted filesystems
-
-````bash
 ```bash
 mount
 ````
@@ -117,8 +103,6 @@ mount
 ## ✅ Task 1: Create a Soft (Symbolic) Link to a File
 
 ### Step 1: Create Directory and File
-
-````bash
 ```bash
 mkdir -p ~/linkdemo/task1
 cd ~/linkdemo/task1
@@ -126,15 +110,11 @@ echo "This is file1" > file1.txt
 ````
 
 ### Step 2: Create Soft Link
-
-````bash
 ```bash
 ln -s file1.txt softlink_to_file1.txt
 ````
 
 ### Step 3: Verify
-
-````bash
 ```bash
 ls -l
 ````
@@ -145,7 +125,6 @@ ls -l
 
 ### Step 1: Create Directory and File
 
-````bash
 ```bash
 mkdir -p ~/linkdemo/task2
 cd ~/linkdemo/task2
@@ -154,14 +133,13 @@ echo "This is file2" > file2.txt
 
 ### Step 2: Create Hard Link
 
-````bash
 ```bash
 ln file2.txt hardlink_to_file2.txt
 ````
 
 ### Step 3: Check Inodes
 
-````bash
+
 ```bash
 ls -li file2.txt hardlink_to_file2.txt
 ````
@@ -172,7 +150,7 @@ ls -li file2.txt hardlink_to_file2.txt
 
 ### Step 1: Create Directory and File Inside It
 
-````bash
+
 ```bash
 mkdir -p ~/linkdemo/task3/original_dir
 cd ~/linkdemo/task3
@@ -181,14 +159,13 @@ touch original_dir/sample.txt
 
 ### Step 2: Create Symbolic Link to Directory
 
-````bash
+
 ```bash
 ln -s original_dir symlink_to_dir
 ````
 
 ### Step 3: Verify
 
-````bash
 ```bash
 ls -l
 ````
@@ -199,7 +176,6 @@ ls -l
 
 ### Step 1: Create Directory and File
 
-````bash
 ```bash
 mkdir -p ~/linkdemo/task4
 cd ~/linkdemo/task4
@@ -208,7 +184,6 @@ echo "Important data" > original.txt
 
 ### Step 2: Create Hard and Soft Links
 
-````bash
 ```bash
 ln -s original.txt symlink.txt
 ln original.txt hardlink.txt
@@ -216,14 +191,12 @@ ln original.txt hardlink.txt
 
 ### Step 3: Delete Original File
 
-````bash
 ```bash
 rm original.txt
 ````
 
 ### Step 4: Test Both Links
 
-````bash
 ```bash
 cat symlink.txt       # This will fail (broken link)
 cat hardlink.txt      # This will still work
@@ -235,7 +208,6 @@ cat hardlink.txt      # This will still work
 
 ### Step 1: Create Directory and Files
 
-````bash
 ```bash
 mkdir -p ~/linkdemo/task5
 cd ~/linkdemo/task5
@@ -246,7 +218,7 @@ ln -s /bin /usr_linked_bin
 
 ### Step 2: Find All Symbolic Links
 
-````bash
+
 ```bash
 find . -type l
 ````
