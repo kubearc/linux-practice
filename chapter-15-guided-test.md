@@ -22,7 +22,7 @@ systemctl status mariadb.service
 ## Step 2: Secure MariaDB Installation
 
 ```bash
-sudo mysql_secure_installation
+mysql_secure_installation
 ```
 
 Answer the prompts:
