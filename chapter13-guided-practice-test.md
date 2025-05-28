@@ -45,7 +45,7 @@ firewall-cmd --reload
 
 ---
 
-### Task 11: Create custom zone and add SSH service
+### Task 6: Create custom zone and add SSH service
 ```bash
 firewall-cmd --permanent --new-zone=labzone
 firewall-cmd --permanent --zone=labzone --add-service=ssh
@@ -54,7 +54,7 @@ firewall-cmd --reload
 
 ---
 
-### Task 12: Allow http in custom zone
+### Task 7: Allow http in custom zone
 ```bash
 firewall-cmd --permanent --zone=labzone --add-service=http
 firewall-cmd --reload
@@ -62,7 +62,7 @@ firewall-cmd --reload
 
 ---
 
-### Task 13: Allow only SSH and HTTP, block rest
+### Task 8: Allow only SSH and HTTP, block rest
 ```bash
 firewall-cmd --permanent --remove-service=dhcpv6-client
 firewall-cmd --permanent --zone=public --add-service=ssh
@@ -70,11 +70,4 @@ firewall-cmd --permanent --zone=public --add-service=http
 firewall-cmd --reload
 ```
 ---
-
-
-### Task 20: Restore default SELinux context
-```bash
-sudo restorecon -v /home/user/test.sh
-```
-
 ---
