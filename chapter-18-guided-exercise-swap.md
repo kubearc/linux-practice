@@ -1,8 +1,8 @@
 
 # Guided Exercise: Managing Swap Partition 
-
-> **Note:** You must be **root** to run these commands. Use `su -` to switch to root if needed.
-> ## Notes
+---
+> **Note:**
+- You must be **root** to run these commands. Use `su -` to switch to root if needed.
 - All commands assume you are running as root (no `sudo` prefixes).  
 - Replace `/dev/sdb` and `/dev/sdb1` with your actual device names if different.
 ---
@@ -67,8 +67,7 @@ Get the UUID of the swap partition:
 blkid /dev/sdb1
 ```
 
-Edit `/etc/fstab` using your preferred text editor (e.g., `vim` or `nano`):
-
+Edit `/etc/fstab` using **vim** text editor 
 ```bash
 vim /etc/fstab
 ```
@@ -105,7 +104,3 @@ su -
 ```
 
 ---
-
-## Notes
-- All commands assume you are running as root (no `sudo` prefixes).  
-- Replace `/dev/sdb` and `/dev/sdb1` with your actual device names if different.
