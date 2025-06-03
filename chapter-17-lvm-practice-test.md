@@ -61,8 +61,14 @@ lvdisplay
 mkfs.ext4 /dev/vg_test/lv_data
 mkdir /mnt/data
 mount /dev/vg_test/lv_data /mnt/data
-echo "/dev/vg_test/lv_data /mnt/data ext4 defaults 0 0" >> /etc/fstab
 ```
+## 🧺 Part 5: Make the Mount Permanent 
+```bash
+vim /etc/fstab
+```
+
+### Add this line 
+/dev/vg_test/lv_data /mnt/data ext4 defaults 0 0"
 
 ### Verify:
 ```bash
@@ -73,7 +79,7 @@ cat /etc/fstab
 
 ---
 
-## 🧺 Part 5: Resize Logical Volume
+## 🧺 Part 6: Resize Logical Volume
 
 ### Task:
 ```bash
@@ -89,7 +95,7 @@ df -h /mnt/data
 
 ---
 
-## 🧺 Part 6: Remove LVM Setup
+## 🧺 Part 7: Remove LVM Setup
 
 ### Task:
 ```bash
