@@ -19,8 +19,9 @@ fdisk -l /dev/sdb
 
 ---
 
-## ✅ Step 3: Create a new MBR partition on `/dev/sdb`
+## ✅ Step 3: Verify that a /dev/sdb device is listed in lsblk. If yes then Create a new MBR partition of 100MB on `/dev/sdb`
 ```bash
+lsblk
 fdisk /dev/sdb
 ```
 **Inside `fdisk`:**
@@ -28,7 +29,7 @@ fdisk /dev/sdb
 - `p` → primary  
 - `1` → partition number  
 - `Enter` → accept default first sector  
-- `Enter` → accept default last sector  
+- `+100M` → Type 100M and press enter  
 - `w` → write and exit
 
 ---
@@ -40,7 +41,7 @@ partprobe
 
 ---
 
-## ✅ Step 5: Confirm new partition exists
+## ✅ Step 5: Confirm new partition /dev/sdb1 exists
 ```bash
 lsblk
 ```
@@ -62,9 +63,10 @@ mkdir -p /mnt/data
 
 ---
 
-## ✅ Step 9: Mount the partition
+## ✅ Step 9: Mount the partition and create some files in it.
 ```bash
 mount /dev/sdb1 /mnt/data
+touch /mnt/data/file{1..10}
 ```
 
 ---
@@ -76,43 +78,30 @@ df -h | grep sdb1
 
 ---
 
-## ✅ Step 11: Set permissions for shared use
+## ✅ Step 11: Make an FSTAB entry to permanently mount it.
 ```bash
-chmod 777 /mnt/data
+vim /etc/fstab
+```
+Add Below Entry, replace the partition ID with ID of newly created partition.
+```bash
+/dev/partition-id /mnt/data  ext4  defaults  0 0
 ```
 
 ---
 
-## ✅ Step 12: Get UUID for fstab entry
-```bash
-blkid /dev/sdb1
-```
-
----
-
-## ✅ Step 13: Add entry to `/etc/fstab`
-```bash
-nano /etc/fstab
-```
-**Add line (replace `<UUID>`):**
-```
-UUID=<UUID>  /mnt/data  ext4  defaults  0 0
-```
-
----
-
-## ✅ Step 14: Test `fstab` without rebooting
+## ✅ Step 12: Test `fstab` without rebooting
 ```bash
 umount /mnt/data
 mount -a
+df -Th
+lsblk
 ```
 
 ---
 
-## ✅ Step 15: Verify everything
+## ✅ Step 13: Verify that files created in **step 9** are there in /mnt/data
 ```bash
-mount | grep sdb1
-ls -ld /mnt/data
+ls -l /mnt/data
 ```
 
 ---
