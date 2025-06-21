@@ -3,6 +3,8 @@
 
 ## 🎯 Goal:
 Deploy a simple HTML website using Apache HTTP Server on a Red Hat system.
+---
+### Note: Your yum server should be configure before this. 
 
 ---
 
