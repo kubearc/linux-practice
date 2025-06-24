@@ -159,7 +159,7 @@ mysqldump -u root -p company > ~/company_backup.sql
 ```
 ## Step 16: Send the backup file to node 2
 ```bash
-scp ~/company_backup.sql  root@node2.example.com:/root
+scp ~/company_backup.sql  test@node2.example.com:~/
 ```
 ---
 
