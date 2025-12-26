@@ -43,7 +43,7 @@ vgdisplay vg_test
 ### Task:
 ```bash
 lvcreate -L 1G -n lv_data vg_test
-lvcreate -l 100%FREE -n lv_extra vg_test
+lvcreate -l 50%FREE -n lv_extra vg_test
 ```
 
 ### Verify:
