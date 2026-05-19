@@ -1,5 +1,5 @@
 
-# Chapter 010 - Guided Exercise 01 - Creating Tar Files
+# Chapter 10 - Guided Exercise 01 - Creating Tar Files
 
 ## Objective
 Learn how to create a `.tar` archive, extract it, and transfer it between systems using `scp`.
