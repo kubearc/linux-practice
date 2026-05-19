@@ -1,12 +1,9 @@
-# RHCSA Practical Test – 2 Nodes
-## Kubearc Academy
-
+# Linux Practical Test – 2 Nodes
 ---
 
 # Exam Instructions
 
-- Total Time: 3 Hours
-- Total Marks: 100
+- Total Time: 3 Hours | Total Marks: 100
 - Do not copy from other students
 - Verify every task before submission
 - Reboot system only if required
