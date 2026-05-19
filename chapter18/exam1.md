@@ -6,8 +6,9 @@
 - Total Time: 3 Hours | Total Marks: 100
 - Do not copy from other students
 - Verify every task before submission
-- Reboot system only if required
+- Reboot the system only if required
 - Use proper Linux administration practices
+- You have to add a disk of 10GB on the **Node2** 
 
 ---
 
